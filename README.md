@@ -50,4 +50,16 @@ Dans ce modpack, vous commencez sur une Terre abandonnée, désaturée et sans v
 - `/scripts` - Scripts CraftTweaker pour les recettes personnalisées
 - `/resources` - Ressources et assets pour le modpack
 
+### Mentions légales importantes
+
+**Avis de non-responsabilité et droits d'auteur :**
+
+- Ce dépôt est exclusivement destiné au développement et à la documentation du modpack, et non à sa distribution.
+- Les fichiers JAR inclus dans ce dépôt sont fournis uniquement à des fins de référence pour le développement.
+- Nous ne détenons aucun droit sur les mods inclus dans ce modpack. Tous les mods appartiennent à leurs créateurs respectifs.
+- Si vous êtes le créateur d'un mod inclus et souhaitez que votre contenu soit retiré, veuillez nous contacter.
+- Pour toute utilisation de ce modpack, les utilisateurs finaux doivent télécharger les mods depuis les sources officielles.
+
+En téléchargeant ou utilisant ce modpack, vous acceptez de respecter les termes de licence de chaque mod individuel inclus.
+
 *Version actuelle: En développement - Mars 2025*
