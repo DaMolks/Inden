@@ -1,11 +1,11 @@
 {
 	version: 13
 	title: "Inden"
-	icon: "mysticalagriculture:supremium_growth_accelerator"
+	icon: "inden:biomass"
 	default_reward_team: false
 	default_consume_items: false
 	default_autoclaim_rewards: "disabled"
-	default_quest_shape: "circle"
+	default_quest_shape: "hexagon"
 	default_quest_disable_jei: false
 	emergency_items_cooldown: 300
 	drop_loot_crates: false
@@ -17,5 +17,5 @@
 	disable_gui: false
 	grid_scale: 0.5d
 	pause_game: false
-	lock_message: ""
+	lock_message: "Cette zone n'est pas encore terraformée ou débloquée dans votre progression."
 }
