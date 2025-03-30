@@ -1,0 +1,2 @@
+Ce fichier est un placeholder pour maintenir la structure du dossier. 
+Remplacez-le par vos bannières et textures de quêtes.
