@@ -6,30 +6,20 @@
 	title: "Protocole d'Atterrissage"
 	icon: "minecraft:grass_block"
 	subtitle: ["Activez vos systèmes et commencez la mission"]
-	description: [
-		"Vous venez d'atterrir sur une Terre abandonnée. Les lectures de vos capteurs indiquent un environnement hostile et dégradé."
-		""
-		"Votre mission: restaurer la planète pour le retour de l'humanité."
-		""
-		"Commencez par activer vos systèmes de base et établir un premier avant-poste."
-	]
-	always_invisible: false
 	default_quest_shape: "hexagon"
 	default_hide_dependency_lines: false
-	images: [
-		{
-			x: 0.0d
-			y: -3.0d
-			width: 12.0d
-			height: 3.0d
-			rotation: 0.0d
-			image: "inden:textures/quests/landing_banner.png"
-			hover: [ ]
-			click: ""
-			dev: false
-			corner: false
-		}
-	]
+	images: [{
+		x: -5.5d
+		y: -6.0d
+		width: 12.0d
+		height: 3.0d
+		rotation: 0.0d
+		image: "inden:textures/quests/landing_banner.png"
+		hover: [ ]
+		click: ""
+		dev: false
+		corner: false
+	}]
 	quests: [
 		{
 			title: "Activation des Systèmes"
@@ -41,20 +31,17 @@
 				""
 				"Établissez un espace de travail minimum pour commencer la mission."
 			]
-			dependencies: [ ]
 			id: "6FA7E99707D3AB43"
 			tasks: [
 				{
 					id: "7EC0F9A45A76F68E"
 					type: "item"
 					item: "minecraft:crafting_table"
-					count: 1L
 				}
 				{
 					id: "0DBDCCE4E0C8FD55"
 					type: "item"
 					item: "minecraft:chest"
-					count: 1L
 				}
 			]
 			rewards: [
@@ -74,7 +61,13 @@
 		}
 		{
 			title: "Premiers Outils"
-			icon: "exnihilosequentia:wooden_hammer"
+			icon: {
+				id: "exnihilosequentia:hammer_wood"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
 			x: -1.5d
 			y: 0.0d
 			description: [
@@ -82,28 +75,29 @@
 				""
 				"Le protocole Ex Nihilo vous permettra de générer des ressources à partir de presque rien."
 			]
-			dependencies: [
-				"6FA7E99707D3AB43"
-			]
+			dependencies: ["6FA7E99707D3AB43"]
 			id: "3F4C0F5C94B7A191"
 			tasks: [
 				{
 					id: "7B53C883F3D774CE"
 					type: "item"
-					item: "exnihilosequentia:wooden_hammer"
-					count: 1L
+					item: {
+						id: "exnihilosequentia:hammer_wood"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
 				}
 				{
 					id: "1C6BD5A7DFCD0C94"
 					type: "item"
-					item: "exnihilosequentia:oak_sieve"
-					count: 1L
+					item: "exnihilosequentia:sieve"
 				}
 				{
 					id: "2C1D30656FB4A87B"
 					type: "item"
-					item: "exnihilosequentia:string_mesh"
-					count: 1L
+					item: "exnihilosequentia:mesh_string"
 				}
 			]
 			rewards: [
@@ -131,34 +125,29 @@
 				""
 				"Établissez une source d'énergie de base pour alimenter vos premiers dispositifs."
 			]
-			dependencies: [
-				"3F4C0F5C94B7A191"
-			]
+			dependencies: ["3F4C0F5C94B7A191"]
 			id: "5D39C265A2DEDD1C"
-			tasks: [
-				{
-					id: "6F5DD6FF40C6DB7F"
-					type: "item"
-					title: "Générateur d'Énergie"
-					item: {
-						id: "itemfilters:or"
-						Count: 1b
-						tag: {
-							items: [
-								{
-									id: "create:water_wheel"
-									Count: 1b
-								}
-								{
-									id: "mekanismgenerators:heat_generator"
-									Count: 1b
-								}
-							]
-						}
+			tasks: [{
+				id: "6F5DD6FF40C6DB7F"
+				type: "item"
+				title: "Générateur d'Énergie"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "create:water_wheel"
+								Count: 1b
+							}
+							{
+								id: "mekanismgenerators:heat_generator"
+								Count: 1b
+							}
+						]
 					}
-					count: 1L
 				}
-			]
+			}]
 			rewards: [
 				{
 					id: "2B97D4C1B0D6A9D3"
@@ -170,9 +159,6 @@
 					id: "10F2F0F9BEC1AF88"
 					type: "item"
 					item: "patchouli:guide_book"
-					nbt: {
-						"patchouli:book": "create:main"
-					}
 				}
 			]
 		}
@@ -186,9 +172,7 @@
 				""
 				"Le tamisage vous permettra d'obtenir les premiers matériaux dont vous avez besoin."
 			]
-			dependencies: [
-				"3F4C0F5C94B7A191"
-			]
+			dependencies: ["3F4C0F5C94B7A191"]
 			id: "0B64D31E9ECABE64"
 			tasks: [
 				{
@@ -196,27 +180,10 @@
 					type: "item"
 					title: "Cailloux"
 					item: {
-						id: "itemfilters:or"
+						id: "itemfilters:id_regex"
 						Count: 1b
 						tag: {
-							items: [
-								{
-									id: "exnihilosequentia:stone_pebble"
-									Count: 1b
-								}
-								{
-									id: "exnihilosequentia:andesite_pebble"
-									Count: 1b
-								}
-								{
-									id: "exnihilosequentia:granite_pebble"
-									Count: 1b
-								}
-								{
-									id: "exnihilosequentia:diorite_pebble"
-									Count: 1b
-								}
-							]
+							value: ".*pebble"
 						}
 					}
 					count: 16L
@@ -238,20 +205,25 @@
 				{
 					id: "67E5E7932F429F0C"
 					type: "item"
-					item: "exnihilosequentia:iron_pieces"
+					item: "exnihilosequentia:piece_iron"
 					count: 8
 				}
 				{
 					id: "5D5FBF18D48BEF48"
 					type: "item"
-					item: "exnihilosequentia:silk_mesh"
-					count: 1
+					item: "exnihilosequentia:mesh_iron"
 				}
 			]
 		}
 		{
 			title: "Plantation Initiale"
-			icon: "pamhc2crops:seedlingitem"
+			icon: {
+				id: "minecraft:diamond_hoe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
 			x: 3.0d
 			y: 0.0d
 			description: [
@@ -259,28 +231,30 @@
 				""
 				"Commencez à cultiver des plantes de base pour produire votre première biomasse."
 			]
-			dependencies: [
-				"0B64D31E9ECABE64"
-			]
+			dependencies: ["0B64D31E9ECABE64"]
 			id: "4C9B1C9B0E3C83FE"
 			tasks: [
 				{
 					id: "2BEF32D0C4C42A7D"
 					type: "item"
 					item: {
-						id: "itemfilters:tag"
+						id: "itemfilters:id_regex"
 						Count: 1b
 						tag: {
-							value: "minecraft:hoes"
+							value: ".*hoe"
 						}
 					}
-					count: 1L
 				}
 				{
 					id: "3A7DCB0D79103F59"
 					type: "item"
-					item: "exnihilosequentia:wooden_watering_can"
-					count: 1L
+					item: {
+						id: "mysticalagriculture:watering_can"
+						Count: 1b
+						tag: {
+							Water: 0b
+						}
+					}
 				}
 				{
 					id: "4FDADF23F6EF4AA5"
@@ -301,10 +275,8 @@
 					id: "4D1BC9FE1995C7A0"
 					type: "item"
 					title: "Assortiment de Graines"
-					item: {
-						id: "minecraft:wheat_seeds"
-						Count: 8b
-					}
+					item: "minecraft:wheat_seeds"
+					count: 8
 				}
 				{
 					id: "1CACF83F20B44C53"
@@ -324,9 +296,7 @@
 				""
 				"Une structure simple suffira pour ce stade initial."
 			]
-			dependencies: [
-				"4C9B1C9B0E3C83FE"
-			]
+			dependencies: ["4C9B1C9B0E3C83FE"]
 			id: "59D86A5E839CB192"
 			tasks: [
 				{
@@ -340,7 +310,6 @@
 							value: "minecraft:doors"
 						}
 					}
-					count: 1L
 				}
 				{
 					id: "20C37F1AD4DB0E58"
@@ -353,7 +322,6 @@
 							value: "minecraft:beds"
 						}
 					}
-					count: 1L
 				}
 				{
 					id: "28A09DD4E1BD7651"
@@ -367,13 +335,11 @@
 					id: "16FD5E34DFAEE1A8"
 					type: "item"
 					item: "minecraft:furnace"
-					count: 1
 				}
 				{
 					id: "3C6CE3972F4B0D61"
 					type: "item"
 					item: "sophisticatedbackpacks:backpack"
-					count: 1
 				}
 			]
 		}
@@ -390,18 +356,14 @@
 				""
 				"Vous êtes prêt à commencer la phase de production de biomasse, une étape cruciale dans la terraformation de cette planète dévastée."
 			]
-			dependencies: [
-				"59D86A5E839CB192"
-			]
+			dependencies: ["59D86A5E839CB192"]
 			size: 1.5d
 			id: "66E5A0C42675A35E"
-			tasks: [
-				{
-					id: "6DBE74590C968294"
-					type: "checkmark"
-					title: "Chapitre Terminé"
-				}
-			]
+			tasks: [{
+				id: "6DBE74590C968294"
+				type: "checkmark"
+				title: "Chapitre Terminé"
+			}]
 			rewards: [
 				{
 					id: "3957742C43E59480"
