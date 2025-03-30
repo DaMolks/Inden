@@ -1,0 +1,415 @@
+{
+	id: "landing_protocol",
+	order_index: 0,
+	title: "Protocole d'Atterrissage",
+	icon: "minecraft:grass_block",
+	subtitle: ["Activez vos systèmes et commencez la mission"],
+	description: [
+		"Vous venez d'atterrir sur une Terre abandonnée. Les lectures de vos capteurs indiquent un environnement hostile et dégradé.",
+		"",
+		"Votre mission: restaurer la planète pour le retour de l'humanité.",
+		"",
+		"Commencez par activer vos systèmes de base et établir un premier avant-poste."
+	],
+	always_invisible: false,
+	group: "inden:main_progression",
+	default_quest_shape: "hexagon",
+	filename: "landing_protocol",
+	quests: [
+		{
+			id: "activation_systems",
+			x: -3.0d,
+			y: 0.0d,
+			title: "Activation des Systèmes",
+			icon: "minecraft:crafting_table",
+			description: [
+				"Vos systèmes de base sont en mode veille après le long voyage.",
+				"",
+				"Établissez un espace de travail minimum pour commencer la mission."
+			],
+			dependencies: [],
+			tasks: [
+				{
+					id: "craft_table",
+					type: "item",
+					item: "minecraft:crafting_table",
+					count: 1L
+				},
+				{
+					id: "craft_chest",
+					type: "item",
+					item: "minecraft:chest",
+					count: 1L
+				}
+			],
+			rewards: [
+				{
+					id: "starter_food",
+					type: "item",
+					item: "minecraft:bread",
+					count: 16
+				},
+				{
+					id: "starter_torch",
+					type: "item",
+					item: "minecraft:torch",
+					count: 16
+				}
+			]
+		},
+		{
+			id: "first_tools",
+			x: -1.5d,
+			y: 0.0d,
+			title: "Premiers Outils",
+			icon: "exnihilosequentia:wooden_hammer",
+			description: [
+				"L'environnement est trop dégradé pour soutenir une extraction conventionnelle.",
+				"",
+				"Le protocole Ex Nihilo vous permettra de générer des ressources à partir de presque rien."
+			],
+			dependencies: [
+				"activation_systems"
+			],
+			tasks: [
+				{
+					id: "wooden_hammer",
+					type: "item",
+					item: "exnihilosequentia:wooden_hammer",
+					count: 1L
+				},
+				{
+					id: "wooden_sieve",
+					type: "item",
+					item: "exnihilosequentia:oak_sieve",
+					count: 1L
+				},
+				{
+					id: "string_mesh",
+					type: "item",
+					item: "exnihilosequentia:string_mesh",
+					count: 1L
+				}
+			],
+			rewards: [
+				{
+					id: "reward_dirt",
+					type: "item",
+					item: "minecraft:dirt",
+					count: 16
+				},
+				{
+					id: "reward_sapling",
+					type: "item",
+					item: "minecraft:oak_sapling",
+					count: 4
+				}
+			]
+		},
+		{
+			id: "initial_power",
+			x: 0.0d,
+			y: 0.0d,
+			title: "Source d'Énergie Initiale",
+			icon: "create:water_wheel",
+			description: [
+				"Vos systèmes ont besoin d'énergie pour fonctionner efficacement.",
+				"",
+				"Établissez une source d'énergie de base pour alimenter vos premiers dispositifs."
+			],
+			dependencies: [
+				"first_tools"
+			],
+			tasks: [
+				{
+					id: "water_wheel",
+					type: "item",
+					title: "Générateur d'Énergie",
+					item: {
+						id: "itemfilters:or",
+						Count: 1,
+						tag: {
+							items: [
+								{
+									id: "create:water_wheel",
+									Count: 1
+								},
+								{
+									id: "mekanismgenerators:heat_generator",
+									Count: 1
+								}
+							]
+						}
+					},
+					count: 1L
+				}
+			],
+			rewards: [
+				{
+					id: "reward_gears",
+					type: "item",
+					item: "create:cogwheel",
+					count: 8
+				},
+				{
+					id: "reward_create_manual",
+					type: "item",
+					item: "patchouli:guide_book",
+					nbt: {
+						"patchouli:book": "create:main"
+					}
+				}
+			]
+		},
+		{
+			id: "soil_analysis",
+			x: 1.5d,
+			y: 0.0d,
+			title: "Analyse du Sol",
+			icon: "minecraft:gravel",
+			description: [
+				"Utilisez vos nouveaux outils pour analyser le sol et extraire des ressources essentielles.",
+				"",
+				"Le tamisage vous permettra d'obtenir les premiers matériaux dont vous avez besoin."
+			],
+			dependencies: [
+				"first_tools"
+			],
+			tasks: [
+				{
+					id: "collect_pebbles",
+					type: "item",
+					title: "Cailloux",
+					item: {
+						id: "itemfilters:or",
+						Count: 1,
+						tag: {
+							items: [
+								{
+									id: "exnihilosequentia:stone_pebble",
+									Count: 1
+								},
+								{
+									id: "exnihilosequentia:andesite_pebble",
+									Count: 1
+								},
+								{
+									id: "exnihilosequentia:granite_pebble",
+									Count: 1
+								},
+								{
+									id: "exnihilosequentia:diorite_pebble",
+									Count: 1
+								}
+							]
+						}
+					},
+					count: 16L
+				},
+				{
+					id: "collect_sand",
+					type: "item",
+					item: "minecraft:sand",
+					count: 8L
+				},
+				{
+					id: "collect_clay",
+					type: "item",
+					item: "minecraft:clay_ball",
+					count: 16L
+				}
+			],
+			rewards: [
+				{
+					id: "reward_iron_ore",
+					type: "item",
+					item: "exnihilosequentia:iron_pieces",
+					count: 8
+				},
+				{
+					id: "reward_silk_mesh",
+					type: "item",
+					item: "exnihilosequentia:silk_mesh",
+					count: 1
+				}
+			]
+		},
+		{
+			id: "initial_planting",
+			x: 3.0d,
+			y: 0.0d,
+			title: "Plantation Initiale",
+			icon: "pamhc2crops:seedlingitem",
+			description: [
+				"La biomasse est la clé de la terraformation.",
+				"",
+				"Commencez à cultiver des plantes de base pour produire votre première biomasse."
+			],
+			dependencies: [
+				"soil_analysis"
+			],
+			tasks: [
+				{
+					id: "craft_hoe",
+					type: "item",
+					item: {
+						id: "itemfilters:tag",
+						tag: "minecraft:hoes"
+					},
+					count: 1L
+				},
+				{
+					id: "craft_watering_can",
+					type: "item",
+					item: "exnihilosequentia:wooden_watering_can",
+					count: 1L
+				},
+				{
+					id: "plant_seeds",
+					type: "item",
+					title: "Graines (n'importe lesquelles)",
+					item: {
+						id: "itemfilters:tag",
+						tag: "forge:seeds"
+					},
+					count: 3L
+				}
+			],
+			rewards: [
+				{
+					id: "reward_seeds",
+					type: "item",
+					title: "Assortiment de Graines",
+					item: {
+						id: "lootbags:loot_bag",
+						Count: 1,
+						tag: {
+							loot_table: "inden:rewards/starter_seeds",
+							tier: 1,
+							color: 16777215
+						}
+					}
+				},
+				{
+					id: "reward_fertilizer",
+					type: "item",
+					item: "industrialagriculture:fertilizer",
+					count: 8
+				}
+			]
+		},
+		{
+			id: "operations_base",
+			x: 4.5d,
+			y: 0.0d,
+			title: "Base d'Opérations",
+			icon: "minecraft:oak_door",
+			description: [
+				"Établissez une base d'opérations pour centraliser vos activités.",
+				"",
+				"Une structure simple suffira pour ce stade initial."
+			],
+			dependencies: [
+				"initial_planting"
+			],
+			tasks: [
+				{
+					id: "craft_door",
+					type: "item",
+					title: "Porte",
+					item: {
+						id: "itemfilters:tag",
+						tag: "minecraft:doors"
+					},
+					count: 1L
+				},
+				{
+					id: "craft_bed",
+					type: "item",
+					title: "Lit",
+					item: {
+						id: "itemfilters:tag",
+						tag: "minecraft:beds"
+					},
+					count: 1L
+				},
+				{
+					id: "place_blocks",
+					type: "advancement",
+					advancement: "minecraft:story/place_blocks",
+					criterion: ""
+				}
+			],
+			rewards: [
+				{
+					id: "reward_furnace",
+					type: "item",
+					item: "minecraft:furnace",
+					count: 1
+				},
+				{
+					id: "reward_backpack",
+					type: "item",
+					item: "sophisticatedbackpacks:backpack",
+					count: 1
+				},
+				{
+					id: "reward_tech_points",
+					type: "command",
+					command: "/ftbquests change_progress @p complete inden:landing_protocol",
+					player_command: false
+				}
+			]
+		},
+		{
+			id: "chapter_completion",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "gear",
+			title: "Protocole d'Atterrissage Terminé",
+			description: [
+				"Félicitations! Vous avez complété le protocole d'atterrissage initial.",
+				"",
+				"Vos systèmes sont maintenant opérationnels et vous avez établi une base d'opérations.",
+				"",
+				"Vous êtes prêt à commencer la phase de production de biomasse, une étape cruciale dans la terraformation de cette planète dévastée."
+			],
+			dependencies: [
+				"operations_base"
+			],
+			size: 1.5d,
+			tasks: [
+				{
+					id: "chapter_completion_task",
+					type: "checkmark",
+					title: "Chapitre Terminé"
+				}
+			],
+			rewards: [
+				{
+					id: "reward_blueprint",
+					type: "item",
+					item: "inden:biomass_processor_blueprint",
+					count: 1
+				},
+				{
+					id: "reward_xp",
+					type: "xp_levels",
+					xp_levels: 5
+				},
+				{
+					id: "reward_unlock_chapter",
+					type: "command",
+					command: "/inden unlock_chapter biomass_production",
+					player_command: false
+				},
+				{
+					id: "reveal_biomass_quest",
+					type: "command",
+					command: "/ftbquests change_visibility @p show biomass_production",
+					player_command: false
+				}
+			]
+		}
+	]
+}
