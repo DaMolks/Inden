@@ -1,0 +1,6 @@
+{
+	chapter_groups: [
+		{ id: "0A0D66268D91DE70", title: "Industrial Eden" }
+		{ id: "7B731B9163219E7C", title: "Tutorials" }
+	]
+}

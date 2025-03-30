@@ -1,0 +1,16 @@
+{
+	id: "25b6a2e0-0512-4ab1-851a-1312cbd2a7b7"
+	type: "player"
+	player_name: "Molks_"
+	ranks: {
+		25b6a2e0-0512-4ab1-851a-1312cbd2a7b7: "owner"
+	}
+	properties: {
+		"ftbteams:display_name": "Molks_"
+		"ftbteams:color": "#FF6F59"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+	}
+	message_history: [ ]
+	extra: { }
+}

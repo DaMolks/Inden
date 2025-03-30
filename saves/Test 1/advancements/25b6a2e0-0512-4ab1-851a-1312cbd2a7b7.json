@@ -1,0 +1,69 @@
+{
+  "tconstruct:tools/materials_and_you": {
+    "criteria": {
+      "crafted_book": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/blasting_upgrade": {
+    "criteria": {
+      "has_upgrade_base": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/smoking_upgrade_from_smelting_upgrade": {
+    "criteria": {
+      "has_smelting_upgrade": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/smoking_upgrade": {
+    "criteria": {
+      "has_upgrade_base": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/auto_smoking_upgrade": {
+    "criteria": {
+      "has_smoking_upgrade": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/auto_blasting_upgrade": {
+    "criteria": {
+      "has_blasting_upgrade": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/blasting_upgrade_from_smelting_upgrade": {
+    "criteria": {
+      "has_smelting_upgrade": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/auto_blasting_upgrade_from_auto_smelting_upgrade": {
+    "criteria": {
+      "has_auto_smelting_upgrade": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/sophisticatedbackpacks/auto_smoking_upgrade_from_auto_smelting_upgrade": {
+    "criteria": {
+      "has_auto_smelting_upgrade": "2025-03-30 15:03:08 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2025-03-30 15:04:08 +0200"
+    },
+    "done": false
+  },
+  "DataVersion": 2586
+}

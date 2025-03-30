@@ -1,0 +1,13 @@
+{
+	version: 1
+	uuid: "25b6a2e005124ab1851a1312cbd2a7b7"
+	name: "Molks_"
+	can_edit: true
+	lock: false
+	auto_pin: false
+	task_progress: { }
+	started: { }
+	completed: { }
+	claimed_rewards: { }
+	pinned_quests: [ ]
+}

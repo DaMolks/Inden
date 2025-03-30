@@ -1,0 +1,29 @@
+[15:32:08.443][CONSTRUCT][CLIENT][INFO] Starting building internal Registries
+[15:32:10.281][CONSTRUCT][CLIENT][INFO] The following mods have explicit CraftTweaker support:
+'appliedenergisticstweaker' at version '1.0.0.15'
+'botania' at version '1.16.5-420.3'
+'botanypots' at version '7.1.41'
+'crafttweaker' at version '7.1.2.527'
+'exnihilosequentia' at version '1.16-20220530-185402'
+'foregoing_tweaker' at version '1.16.5-1.1.4'
+'jeitweaker' at version '1.1.0.49'
+'lazierae2' at version '2.0.5'
+'mekanism' at version '10.1.2'
+'mysticalagriculture' at version '4.2.6'
+'tconstruct' at version '3.3.4.335'
+'thermal' at version '1.5.2.30'
+'thermal_foundation' at version '1.5.2.30'
+[15:32:11.393][CONSTRUCT][CLIENT][INFO] Completed building internal Registries
+[15:32:16.861][LOAD_REGISTRIES][CLIENT][INFO] Started loading Scripts for Loader 'mekanismcontent'!
+[15:32:19.467][LOAD_REGISTRIES][CLIENT][INFO] Finished loading Scripts!
+[15:32:19.467][LOAD_REGISTRIES][CLIENT][INFO] Registering 0 custom gases.
+[15:32:19.475][LOAD_REGISTRIES][CLIENT][INFO] Registering 0 custom infuse types.
+[15:32:19.478][LOAD_REGISTRIES][CLIENT][INFO] Registering 0 custom pigments.
+[15:32:19.480][LOAD_REGISTRIES][CLIENT][INFO] Registering 0 custom robit skins.
+[15:32:19.480][LOAD_REGISTRIES][CLIENT][INFO] Registering 0 custom slurries.
+[15:32:22.106][COMMON_SETUP][CLIENT][INFO] Started loading Scripts for Loader 'setupCommon'!
+[15:32:22.203][COMMON_SETUP][CLIENT][INFO] Finished loading Scripts!
+[15:32:52.847][DONE][CLIENT][INFO] Started loading Scripts for Loader 'crafttweaker'!
+[15:32:52.902][DONE][CLIENT][INFO] Finished loading Scripts!
+[15:32:59.965][DONE][CLIENT][INFO] Started loading Scripts for Loader 'crafttweaker'!
+[15:32:59.999][DONE][CLIENT][INFO] Finished loading Scripts!

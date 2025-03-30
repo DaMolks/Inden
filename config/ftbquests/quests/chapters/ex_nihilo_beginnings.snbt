@@ -1,0 +1,351 @@
+{
+	id: "1F30CB0F3599BF51"
+	group: "0A0D66268D91DE70"
+	order_index: 0
+	filename: "ex_nihilo_beginnings"
+	title: "Origines Ex Nihilo"
+	icon: "exnihilosequentia:oak_sieve"
+	subtitle: ["Vos premiers pas sur la Terre désolée"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: 0.5d
+			y: -3.0d
+			width: 3.0d
+			height: 3.0d
+			rotation: 0.0d
+			image: "#FFFFFF"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 6.0d
+			y: -3.0d
+			width: 3.0d
+			height: 3.0d
+			rotation: 0.0d
+			image: "#FFFFFF"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			title: "Arrivée sur Terre"
+			icon: "minecraft:grass_block"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: ["Bienvenue sur Terre, un monde autrefois verdoyant désormais réduit à un désert stérile. En tant que robot terraformeur, votre mission est de revitaliser la planète et de préparer le retour des humains."]
+			size: 2.0d
+			id: "2A3FB0EC6785A1DE"
+			tasks: [{
+				id: "1A2B3C4D5E6F7890"
+				type: "checkmark"
+				title: "Mission Acceptée"
+			}]
+			rewards: [
+				{
+					id: "1C9E7A3F5B2D8E4F"
+					type: "item"
+					item: "minecraft:book"
+				}
+				{
+					id: "721867D9D6DA0EE0"
+					type: "item"
+					item: "minecraft:oak_sapling"
+					count: 2
+				}
+				{
+					id: "2D1E31D659660C22"
+					type: "item"
+					item: "minecraft:dirt"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Premières Ressources"
+			x: 2.0d
+			y: 0.0d
+			description: ["Commencez par fabriquer un marteau. Cet outil vous permettra de broyer les roches et d'obtenir des ressources de base essentielles pour vos premières opérations de terraformation."]
+			dependencies: ["2A3FB0EC6785A1DE"]
+			id: "3B4FC1FD7896B2EF"
+			tasks: [{
+				id: "4917959E00C4B7E7"
+				type: "item"
+				item: "exnihilosequentia:hammer_wooden"
+			}]
+			rewards: [{
+				id: "684146EB3CA375E5"
+				type: "item"
+				item: "minecraft:stone"
+				count: 8
+			}]
+		}
+		{
+			title: "Poussière et Gravier"
+			x: 4.0d
+			y: 0.0d
+			description: ["Utilisez votre marteau pour transformer les roches en gravier, puis en sable, et enfin en poussière. Ces matériaux de base seront essentiels pour votre progression."]
+			dependencies: ["3B4FC1FD7896B2EF"]
+			id: "6C4A036CADCCE32B"
+			tasks: [
+				{
+					id: "77CE45A1A70BBA44"
+					type: "item"
+					item: "exnihilosequentia:dust"
+					count: 4L
+				}
+				{
+					id: "31EEA49E3F855EF0"
+					type: "item"
+					item: "minecraft:gravel"
+					count: 4L
+				}
+				{
+					id: "5FDA2309222CC085"
+					type: "item"
+					item: "minecraft:sand"
+					count: 4L
+				}
+			]
+			rewards: [{
+				id: "0E327922CD6DB69E"
+				type: "item"
+				item: "minecraft:clay_ball"
+				count: 8
+			}]
+		}
+		{
+			title: "Le Tamis de Base"
+			x: 6.0d
+			y: 0.0d
+			description: ["Le tamis est l'un des outils les plus importants pour vos opérations. Il vous permettra d'extraire des ressources précieuses à partir de matériaux de base comme le gravier, le sable et la poussière."]
+			id: "1C60E5BBB095FD88"
+			tasks: [
+				{
+					id: "0401E7348FEBFE2F"
+					type: "item"
+					item: "exnihilosequentia:oak_sieve"
+				}
+				{
+					id: "67F962DC366665EA"
+					type: "item"
+					item: "exnihilosequentia:mesh_string"
+				}
+			]
+			rewards: [{
+				id: "1669A27989C0BA3F"
+				type: "item"
+				item: "minecraft:dirt"
+				count: 16
+			}]
+		}
+		{
+			title: "Premiers Minerais"
+			x: 8.0d
+			y: 0.0d
+			description: ["Tamisez du gravier pour obtenir vos premiers fragments de minerais. Ces fragments peuvent être combinés pour former des minerais complets qui seront fondus en métaux."]
+			id: "26B14C65B2B53333"
+			tasks: [
+				{
+					id: "60B6E0D2852917DC"
+					type: "item"
+					item: "exnihilosequentia:piece_iron"
+					count: 4L
+				}
+				{
+					id: "63CE495148424FC2"
+					type: "item"
+					item: "exnihilosequentia:piece_copper"
+					count: 4L
+				}
+			]
+			rewards: [{
+				id: "2CEE003DBB6A21FA"
+				type: "item"
+				item: "minecraft:coal"
+				count: 8
+			}]
+		}
+		{
+			title: "Le Creuset"
+			x: 8.0d
+			y: 2.0d
+			description: ["Le creuset est un outil essentiel pour produire de la lave, une ressource cruciale pour vos futurs développements technologiques et pour la terraformation."]
+			id: "039D0C977635EA87"
+			tasks: [{
+				id: "4FE9D9D65351CA2B"
+				type: "item"
+				item: "exnihilosequentia:fired_crucible"
+			}]
+			rewards: [{
+				id: "233856EE58E6CB28"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 32
+			}]
+		}
+		{
+			title: "Production de Lave"
+			x: 10.0d
+			y: 2.0d
+			description: ["Produisez votre premier seau de lave en plaçant du cobblestone dans le creuset chauffé. Cette lave sera utilisée pour générer plus de ressources et pour alimenter vos premières machines."]
+			id: "1E145AD02FD1A3B8"
+			tasks: [{
+				id: "3C7A4FEB23250CBA"
+				type: "item"
+				item: "minecraft:lava_bucket"
+			}]
+			rewards: [{
+				id: "0AFF9E797B0F378B"
+				type: "item"
+				item: "minecraft:bucket"
+				count: 2
+			}]
+		}
+		{
+			title: "Générateur de Cobblestone"
+			x: 12.0d
+			y: 2.0d
+			description: ["Créez un générateur de cobblestone en faisant couler de l'eau sur de la lave. C'est la première étape vers l'automatisation de vos ressources de base."]
+			id: "3A9EE156DE970A22"
+			tasks: [{
+				id: "7E5AE645740E069B"
+				type: "observation"
+				title: "Observer un bloc de cobblestone généré"
+				icon: "minecraft:cobblestone"
+				timer: 100L
+				observe_type: 0
+				to_observe: "minecraft:cobblestone"
+			}]
+			rewards: [{
+				id: "60199E11077AB6FD"
+				type: "item"
+				item: "minecraft:hopper"
+				count: 2
+			}]
+		}
+		{
+			title: "Mailles Améliorées"
+			x: 8.0d
+			y: 4.0d
+			description: ["Fabriquez des mailles améliorées pour votre tamis. Cela vous permettra d'extraire des ressources plus rares et plus précieuses, accélérant ainsi votre progression technologique."]
+			id: "52C5809B117E6118"
+			tasks: [{
+				id: "22541ACE049A5522"
+				type: "item"
+				item: "exnihilosequentia:mesh_iron"
+			}]
+			rewards: [{
+				id: "035F78559755E404"
+				type: "item"
+				item: "exnihilosequentia:piece_gold"
+				count: 6
+			}]
+		}
+		{
+			title: "Métaux Précieux"
+			x: 10.0d
+			y: 4.0d
+			description: ["Utilisez vos mailles améliorées pour obtenir des ressources plus précieuses comme l'or et le redstone, qui seront essentiels pour vos futures avancées technologiques."]
+			id: "67234C2EE42E7474"
+			tasks: [
+				{
+					id: "04B31483758B4550"
+					type: "item"
+					item: "minecraft:gold_ingot"
+					count: 4L
+				}
+				{
+					id: "598189AD2747EC86"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 16L
+				}
+			]
+			rewards: [{
+				id: "2A56736FB98B329B"
+				type: "item"
+				item: "minecraft:diamond"
+				count: 2
+			}]
+		}
+		{
+			title: "Préparation pour l'Agriculture"
+			x: 10.0d
+			y: 6.0d
+			description: ["Obtenez vos premières graines en tamisant de la poussière. L'agriculture sera la base de votre production de biomasse, essentielle pour la terraformation de la planète."]
+			id: "6EE5C9CC1E90A039"
+			tasks: [
+				{
+					id: "080DA2641CA92F40"
+					type: "item"
+					item: "minecraft:wheat_seeds"
+					count: 8L
+				}
+				{
+					id: "75A41013B5E265E6"
+					type: "item"
+					item: "minecraft:carrot"
+					count: 2L
+				}
+				{
+					id: "23CAB78BBD906F14"
+					type: "item"
+					item: "minecraft:potato"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "33380175CB67871A"
+					type: "item"
+					item: "minecraft:bone_meal"
+					count: 16
+				}
+				{
+					id: "0EA1EBCFCA89B241"
+					type: "item"
+					item: "minecraft:water_bucket"
+				}
+			]
+		}
+		{
+			title: "Première Biomasse"
+			icon: "mekanism:bio_fuel"
+			x: 12.0d
+			y: 6.0d
+			shape: "gear"
+			description: ["Convertissez vos premières cultures en biomasse. Ce sera le carburant principal pour votre mission de terraformation de la Terre."]
+			size: 1.5d
+			id: "671CA29EDC86F293"
+			tasks: [{
+				id: "50C6A34818D61D83"
+				type: "item"
+				item: "mekanism:bio_fuel"
+				count: 8L
+			}]
+			rewards: [
+				{
+					id: "7EBEE140EAA34DED"
+					type: "command"
+					command: "/tellraw @p {\"text\":\"Félicitations! Vous avez terminé le chapitre d'introduction et êtes prêt à commencer la terraformation de la planète. Le prochain chapitre vous guidera vers l'automatisation et l'expansion.\",\"color\":\"green\"}"
+					player_command: false
+				}
+				{
+					id: "4F9EA6AF451B2FB0"
+					type: "item"
+					item: "minecraft:emerald"
+					count: 3
+				}
+			]
+		}
+	]
+}

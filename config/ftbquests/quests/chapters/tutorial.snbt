@@ -1,0 +1,54 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tutorial"
+	group: "7B731B9163219E7C"
+	icon: "minecraft:writable_book"
+	id: "64199B6DEC4E993E"
+	images: [
+		{
+			height: 8.0d
+			image: "minecraft:textures/block/grass_block_top.png"  // Texture de la terre pour la terraformation
+			rotation: 0.0d
+			width: 8.0d
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			height: 8.0d
+			image: "mekanism:textures/item/bio_fuel.png"  // Texture de biomasse de Mekanism
+			rotation: 0.0d
+			width: 8.0d
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			height: 8.0d
+			image: "minecraft:textures/entity/villager/villager.png"  // Pour représenter les colonies
+			rotation: 0.0d
+			width: 8.0d
+			x: -11.5d
+			y: -1.0d
+		}
+	]
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		id: "394772B78D9EE690"
+		rewards: [{
+			id: "17A90A947EA73E29"
+			type: "xp"
+			xp: 1
+		}]
+		shape: "diamond"
+		tasks: [{
+			id: "17F511F01FB15857"
+			title: "Je suis la case invisible"
+			type: "checkmark"
+		}]
+		title: "Tu m'as trouvé."
+		x: 5.271428571428572d
+		y: -3.7857142857142883d
+	}]
+	title: "Tutoriels"
+}
