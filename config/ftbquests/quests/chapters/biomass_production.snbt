@@ -1,0 +1,702 @@
+{
+	id: "7EC2B4B26E989A74"
+	group: "1ED9E3E422DD9BD9"
+	order_index: 1
+	filename: "biomass_production"
+	title: "Production de Biomasse"
+	icon: "inden:biomass"
+	subtitle: ["La Terre a besoin de vie"]
+	description: [
+		"Maintenant que votre base d'opérations est établie, vous devez développer des systèmes de production de biomasse efficaces."
+		""
+		"La biomasse est la ressource clé qui permettra de revitaliser la planète."
+		""
+		"Automatisez l'agriculture et créez vos premières chaînes de production."
+	]
+	always_invisible: false
+	default_quest_shape: "hexagon"
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: 0.0d
+			y: -3.0d
+			width: 12.0d
+			height: 3.0d
+			rotation: 0.0d
+			image: "inden:textures/quests/biomass_banner.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			title: "Agriculture de Base"
+			icon: "pamhc2crops:pamgarden"
+			x: -3.0d
+			y: 0.0d
+			description: [
+				"La première étape pour produire de la biomasse est d'établir des fermes manuelles."
+				""
+				"Utilisez les graines de Pam's HarvestCraft pour créer une diversité de cultures."
+			]
+			dependencies: [ ]
+			id: "2E96A48CB908A8D3"
+			tasks: [
+				{
+					id: "57F690B0F3839B83"
+					type: "item"
+					item: "pamhc2crops:pamgarden"
+					count: 1L
+				}
+				{
+					id: "1BAB03D1D6E13E0A"
+					type: "item"
+					item: "minecraft:composter"
+					count: 1L
+				}
+				{
+					id: "5E4F9B9DFB1DED9F"
+					type: "item"
+					title: "Récoltes diverses"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "minecraft:crops"
+						}
+					}
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "221C4D18A9CDC5BD"
+					type: "item"
+					item: "minecraft:iron_hoe"
+					count: 1
+				}
+				{
+					id: "1FCB242E66C6A4F6"
+					type: "item"
+					title: "Graines diverses"
+					item: {
+						id: "pamhc2crops:cornitem"
+						Count: 3b
+					}
+				}
+			]
+		}
+		{
+			title: "Automatisation Agricole"
+			icon: "create:mechanical_harvester"
+			x: -1.5d
+			y: 0.0d
+			description: [
+				"L'agriculture manuelle est inefficace pour la production de biomasse à grande échelle."
+				""
+				"Commencez à automatiser vos fermes avec Create ou Industrial Foregoing."
+			]
+			dependencies: [
+				"2E96A48CB908A8D3"
+			]
+			id: "60F23FF48452DD9A"
+			tasks: [
+				{
+					id: "3E4A1E9EEFA9D3C4"
+					type: "item"
+					title: "Mécanisme de Récolte"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "create:mechanical_harvester"
+									Count: 1b
+								}
+								{
+									id: "industrialforegoing:plant_gatherer"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+				{
+					id: "4C7D1F9DF4B69ABE"
+					type: "item"
+					title: "Mécanisme de Plantation"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "create:deployer"
+									Count: 1b
+								}
+								{
+									id: "industrialforegoing:plant_sower"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "41AE9B8E1A83EFF3"
+					type: "item"
+					item: "minecraft:bone_meal"
+					count: 32
+				}
+				{
+					id: "39A2FF5B254E3AB5"
+					type: "item"
+					item: "create:belt_connector"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Traitement de la Biomasse"
+			icon: "inden:biomass_processor"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Construisez un système pour transformer vos récoltes en biomasse utilisable."
+				""
+				"La biomasse brute sera votre principal produit pour la terraformation."
+			]
+			dependencies: [
+				"60F23FF48452DD9A"
+			]
+			id: "14A39A7CD23C9012"
+			tasks: [
+				{
+					id: "6BAFEB88A0E7D9E4"
+					type: "item"
+					item: "inden:biomass_processor"
+					count: 1L
+				}
+				{
+					id: "64E04AFEDF2CF61E"
+					type: "item"
+					item: "inden:biomass"
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "7D6C3B3F4681FE1D"
+					type: "command"
+					command: "/advancement grant @p only inden:biomass_master"
+					player_command: false
+				}
+				{
+					id: "6E0B09C4C6B7D2B7"
+					type: "item"
+					item: "inden:biomass_catalyst"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Stockage Amélioré"
+			icon: "appliedenergistics2:drive"
+			x: 1.5d
+			y: 0.0d
+			description: [
+				"La production de biomasse va générer de nombreuses ressources à gérer."
+				""
+				"Mettez en place un système de stockage plus efficace pour vous préparer à la montée en échelle."
+			]
+			dependencies: [
+				"14A39A7CD23C9012"
+			]
+			id: "71D5FF6CA4A7C5DF"
+			tasks: [
+				{
+					id: "1E8AC35C4790A03D"
+					type: "item"
+					title: "Système de Stockage"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "appliedenergistics2:drive"
+									Count: 1b
+								}
+								{
+									id: "create:mechanical_crafter"
+									Count: 3b
+								}
+								{
+									id: "sophisticatedbackpacks:storage_controller"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+				{
+					id: "71E16B4AA4C85ED8"
+					type: "item"
+					title: "Amélioration de Stockage"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "appliedenergistics2:1k_storage_cell"
+									Count: 1b
+								}
+								{
+									id: "sophisticatedbackpacks:stack_upgrade"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "3FF1CD44DA7D20A5"
+					type: "item"
+					item: "appliedenergistics2:4k_storage_component"
+					count: 1
+				}
+				{
+					id: "60D12FB30F9A19CE"
+					type: "command"
+					command: "/gamestage add @p storage_mastery"
+					player_command: false
+				}
+			]
+		}
+		{
+			title: "Production d'Énergie Stable"
+			icon: "mekanismgenerators:wind_generator"
+			x: 3.0d
+			y: 0.0d
+			description: [
+				"L'automatisation et le traitement de la biomasse nécessitent une source d'énergie fiable."
+				""
+				"Développez votre infrastructure énergétique pour soutenir vos opérations croissantes."
+			]
+			dependencies: [
+				"71D5FF6CA4A7C5DF"
+			]
+			id: "3FA069FBE9AB1F6F"
+			tasks: [
+				{
+					id: "5D71E1DA2B3E9DF9"
+					type: "item"
+					title: "Générateur Avancé"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "mekanismgenerators:wind_generator"
+									Count: 1b
+								}
+								{
+									id: "mekanismgenerators:solar_generator"
+									Count: 4b
+								}
+								{
+									id: "thermal:dynamo_stirling"
+									Count: 2b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+				{
+					id: "3FE3FD7B7E4A1AD7"
+					type: "item"
+					title: "Stockage d'Énergie"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "mekanism:basic_energy_cube"
+									Count: 1b
+								}
+								{
+									id: "thermal:energy_cell"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "6BA0AE10F9ABF05C"
+					type: "item"
+					item: "mekanism:advanced_energy_cube"
+					count: 1
+				}
+				{
+					id: "56F93F79F8C4D2A9"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+		}
+		{
+			title: "Système d'Irrigation"
+			icon: "thermal:device_water_gen"
+			x: 4.5d
+			y: 0.0d
+			description: [
+				"L'irrigation est essentielle pour maintenir des fermes productives à grande échelle."
+				""
+				"Mettez en place un système d'irrigation automatisé pour vos cultures."
+			]
+			dependencies: [
+				"3FA069FBE9AB1F6F"
+			]
+			id: "1D50B790BE1AC61A"
+			tasks: [
+				{
+					id: "2FC50833AB64856B"
+					type: "item"
+					title: "Source d'Eau"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "thermal:device_water_gen"
+									Count: 1b
+								}
+								{
+									id: "create:mechanical_pump"
+									Count: 1b
+								}
+								{
+									id: "industrialforegoing:water_condensator"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+				{
+					id: "6A0DA799FFE4CB84"
+					type: "item"
+					title: "Transport de Fluides"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "create:fluid_pipe"
+									Count: 16b
+								}
+								{
+									id: "mekanism:basic_mechanical_pipe"
+									Count: 16b
+								}
+								{
+									id: "thermal:fluid_duct"
+									Count: 16b
+								}
+							]
+						}
+					}
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "53A10FC6F77E57A2"
+					type: "item"
+					item: "thermal:device_soil_infuser"
+					count: 1
+				}
+				{
+					id: "2F19CCFDC64A2799"
+					type: "command"
+					command: "/ftbquests change_progress @p complete inden:biomass_production"
+					player_command: false
+				}
+			]
+		}
+		{
+			title: "Diversité des Cultures"
+			icon: "pamhc2crops:pamanimalitem"
+			x: -3.0d
+			y: 2.0d
+			description: [
+				"Une grande diversité de cultures augmente l'efficacité de la production de biomasse."
+				""
+				"Cultivez différents types de plantes pour maximiser votre rendement."
+			]
+			dependencies: [
+				"2E96A48CB908A8D3"
+			]
+			id: "5F91D53A14D0F1FE"
+			tasks: [
+				{
+					id: "3A3FBBCC9EA20D5B"
+					type: "item"
+					title: "Cultures HarvestCraft"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "pamhc2crops:caulifloweritem"
+									Count: 1b
+								}
+								{
+									id: "pamhc2crops:cornitem"
+									Count: 1b
+								}
+								{
+									id: "pamhc2crops:lettuceitem"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 8L
+				}
+				{
+					id: "1ACA66B8124EEF91"
+					type: "item"
+					title: "Fruits HarvestCraft"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "pamhc2trees:appleitem"
+									Count: 1b
+								}
+								{
+									id: "pamhc2trees:orangeitem"
+									Count: 1b
+								}
+								{
+									id: "pamhc2trees:pearitem"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "7C9A4617B6FA55AA"
+					type: "item"
+					item: "minecraft:composter"
+					count: 4
+				}
+				{
+					id: "4BA5DD5D1FC8E2DF"
+					type: "item"
+					item: "minecraft:bone_meal"
+					count: 32
+				}
+			]
+		}
+		{
+			title: "Culture en Pots"
+			icon: "botanypots:botany_pot"
+			x: -1.5d
+			y: 2.0d
+			description: [
+				"Les pots botaniques permettent de cultiver des plantes de manière compacte et contrôlée."
+				""
+				"C'est une méthode idéale pour les cultures dans des espaces restreints ou les cultures spéciales."
+			]
+			dependencies: [
+				"5F91D53A14D0F1FE"
+			]
+			id: "2F3D80EAC8E463CC"
+			tasks: [
+				{
+					id: "0A9FCBE1DF6EB8FE"
+					type: "item"
+					item: "botanypots:botany_pot"
+					count: 4L
+				}
+				{
+					id: "02876C52EB1C6A72"
+					type: "item"
+					item: "botanypots:hopper_botany_pot"
+					count: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "5E49E22B4FCF3E8E"
+					type: "item"
+					item: "botanypots:terracotta_botany_pot"
+					count: 4
+				}
+				{
+					id: "72A1559B56D2D23F"
+					type: "item"
+					item: "botanypots:terracotta_hopper_botany_pot"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Production de Biomasse Terminée"
+			icon: "minecraft:beacon"
+			x: 6.0d
+			y: 0.0d
+			shape: "gear"
+			description: [
+				"Félicitations! Vous avez mis en place un système complet de production et traitement de biomasse."
+				""
+				"Vous êtes maintenant prêt à utiliser cette biomasse pour commencer la terraformation de la planète."
+				""
+				"Dans le prochain chapitre, vous construirez un système de compression et de lancement pour envoyer la biomasse dans l'espace."
+			]
+			dependencies: [
+				"1D50B790BE1AC61A"
+			]
+			size: 1.5d
+			id: "5AA0AA4D3BADEF29"
+			tasks: [
+				{
+					id: "6D77E1A9DC38AAE7"
+					type: "checkmark"
+					title: "Chapitre Terminé"
+				}
+			]
+			rewards: [
+				{
+					id: "74E6A4CF50E0A0F4"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 4
+				}
+				{
+					id: "0E0FD8D2AE84C51D"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					id: "36DADE4ACC5C97A5"
+					type: "command"
+					title: "Débloquer le chapitre suivant"
+					icon: "minecraft:writable_book"
+					command: "/ftbquests change_visibility @p show first_terraforming"
+					player_command: false
+				}
+			]
+		}
+		{
+			title: "Système de Compostage Avancé"
+			icon: "thermal:device_composter"
+			x: 0.0d
+			y: 2.0d
+			description: [
+				"Améliorez votre système de compostage pour augmenter votre production de biomasse."
+				""
+				"Un composteur avancé traite plus efficacement les déchets organiques."
+			]
+			dependencies: [
+				"2F3D80EAC8E463CC"
+			]
+			id: "51FED5756E3C0219"
+			tasks: [
+				{
+					id: "7EE54CF00F0FC767"
+					type: "item"
+					title: "Composteur Avancé"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "thermal:device_composter"
+									Count: 1b
+								}
+								{
+									id: "industrialforegoing:plant_fertilizer"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 1L
+				}
+				{
+					id: "37B82C87AB04BF2E"
+					type: "item"
+					title: "Engrais"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "minecraft:bone_meal"
+									Count: 1b
+								}
+								{
+									id: "thermal:phytogro"
+									Count: 1b
+								}
+								{
+									id: "industrialagriculture:fertilizer"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 32L
+				}
+			]
+			rewards: [
+				{
+					id: "7D2B9EC41C46F1F9"
+					type: "item"
+					item: "thermal:phytogro"
+					count: 16
+				}
+				{
+					id: "3B0CCDB9F53D8AB5"
+					type: "item"
+					item: "botanypots:fertilized_farmland_soil"
+					count: 4
+				}
+			]
+		}
+	]
+}
